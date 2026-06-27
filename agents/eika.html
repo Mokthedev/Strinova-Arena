@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eika — Strinova</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/agent.css">
+<style>
+  /* ── EIKA — The Scissors accent ── */
+  :root {
+    --accent:      #ff3014;
+    --accent-dim:  rgba(255, 48, 20, 0.3);
+    --accent-glow: rgba(255, 48, 20, 0.1);
+    --accent-bg:   rgba(255, 48, 20, 0.06);
+  }
+  /* active ability highlight color */
+  .ability.active { border-left-color: var(--accent); background: var(--accent-glow); }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="../card.html" class="back-btn"><span class="arrow">←</span> All Agents</a>
+  <span class="topbar-faction">The Scissors</span>
+</div>
+
+<!-- SPLIT LAYOUT -->
+<div class="agent-layout">
+
+  <!-- LEFT — character art -->
+  <div class="agent-left">
+    <span class="bg-name">EIKA</span>
+    <div class="agent-art">
+      <!-- CHANGE: swap with your action PNG -->
+      <img src="../images/Eika.png" alt="Eika">
+    </div>
+  </div>
+
+  <!-- RIGHT — info -->
+  <div class="agent-right">
+
+    <!-- HERO INFO -->
+    <p class="agent-eyebrow">The Scissors · Duelist</p>
+    <h1 class="agent-name">EIKA</h1>
+    <p class="agent-title">Vigorous Spark · Preton's Flame</p>
+
+    <div class="agent-tags">
+      <span class="tag">The Scissors</span>
+      <span class="tag">Duelist</span>
+      <span class="tag">Close Range</span>
+      <span class="tag">Fire</span>
+      <span class="tag">Attacker</span>
+    </div>
+
+    <p class="agent-quote">"I am the flame that lights up the heart of Preton."</p>
+
+    <div class="section-divider"></div>
+
+    <!-- STATS -->
+    <p class="section-title">Base Stats</p>
+    <div class="stats-grid">
+      <div class="stat-block"><div class="sl">ATK</div><div class="sv">88</div></div>
+      <div class="stat-block"><div class="sl">HEAT</div><div class="sv">96</div></div>
+      <div class="stat-block"><div class="sl">SPD</div><div class="sv">82</div></div>
+      <div class="stat-block"><div class="sl">HP</div><div class="sv">74</div></div>
+      <div class="stat-block"><div class="sl">DIFF</div><div class="sv">★★★</div></div>
+    </div>
+
+    <!-- BIO -->
+    <p class="section-title">Biography</p>
+    <p class="bio-text">
+      A high school student from Preton who aspires to join The Scissors. Eika has a deep fondness for her hometown and deeply distrusts P.U.S., which abandoned it during a disaster known as the Sunset. Her parents operate a family restaurant where she helps out as a delivery worker. In her free time she practices guitar and plays in a band with her friends. Using her String Energy to control flames, she transforms into a masked, mysterious hero silently guarding the streets of Preton from the shadows.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <!-- ABILITIES -->
+    <p class="section-title">Abilities</p>
+    <div class="abilities-list">
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Passive</span>
+          <span class="ability-name">Heat Buildup</span>
+        </div>
+        <p class="ability-desc">Each shot on an enemy accumulates Heat. At Max Heat, DMG against stringified enemies increases significantly. Skills automatically consume Heat for enhanced effects.</p>
+      </div>
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Active</span>
+          <span class="ability-name">Flame Cage</span>
+        </div>
+        <p class="ability-desc">Summon a Flame Cage at target location. While you and enemies are inside the cage, your Primary Weapon inflicts extra Burn DMG. Enemies crossing the cage walls take Burn DMG, with additional bonus DMG when at full Heat.</p>
+      </div>
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Ultimate</span>
+          <span class="ability-name">Fireball</span>
+        </div>
+        <p class="ability-desc">Throw an explosive fireball that deals extra DMG to stringified enemies. Consuming 100 Heat grants a significant DMG boost and applies a slowing effect to all enemies hit.</p>
+      </div>
+
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- SYNERGY -->
+    <p class="section-title">Team Synergy</p>
+    <div class="synergy-list">
+      <span class="syn-tag">Lawine — Intel + Eika pressure combo</span>
+      <span class="syn-tag">Ming — Double Duelist frontline</span>
+      <span class="syn-tag">Meredith — Sustain support</span>
+      <span class="syn-tag">Kanami — Long + Close range balance</span>
+      <span class="syn-tag">Reiichi — Vision control</span>
+    </div>
+
+  </div>
+  <!-- END right panel -->
+
+</div>
+<!-- END layout -->
+
+<script src="../js/agent.js"></script>
+</body>
+</html>

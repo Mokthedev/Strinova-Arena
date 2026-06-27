@@ -1,0 +1,303 @@
+/* ═══════════════════════════════════════════════
+   STRINOVA — AGENT PAGE STYLES
+   css/agent.css
+═══════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --accent:     #ff3014;
+  --accent-dim: rgba(255, 48, 20, 0.3);
+  --accent-glow:rgba(255, 48, 20, 0.15);
+  --accent-bg:  rgba(255, 48, 20, 0.06);
+  --bg:         #07090f;
+  --surface:    #0c0f1a;
+  --border:     rgba(255,255,255,0.06);
+  --text:       #e0e8ff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.008) 0px, rgba(255,255,255,0.008) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(0deg,  rgba(255,255,255,0.008) 0px, rgba(255,255,255,0.008) 1px, transparent 1px, transparent 60px);
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── BACK BUTTON ── */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 52px;
+  background: rgba(7,9,15,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 100;
+  gap: 1.5rem;
+}
+
+.back-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Orbitron', sans-serif; font-size: 8px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  text-decoration: none; color: var(--text-dim);
+  transition: color 0.25s;
+}
+.back-btn:hover { color: var(--text); }
+.back-btn .arrow { font-size: 16px; line-height: 1; }
+
+.topbar-faction {
+  font-family: 'Orbitron', sans-serif; font-size: 8px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); opacity: 0.6;
+}
+
+/* ── MAIN SPLIT LAYOUT ── */
+.agent-layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  min-height: 100vh;
+  padding-top: 52px;
+}
+
+/* ── LEFT PANEL — character art ── */
+.agent-left {
+  position: sticky;
+  top: 52px;
+  height: calc(100vh - 52px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(160deg, var(--accent-glow) 0%, transparent 60%);
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* accent left edge line */
+.agent-left::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+/* large faded name behind character */
+.agent-left .bg-name {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  opacity: 0.05;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.agent-art {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 0;
+  z-index: 2;
+}
+
+.agent-art img {
+  width: 340px;
+  max-height: calc(100vh - 120px);
+  object-fit: contain;
+  object-position: bottom;
+  display: block;
+  filter: drop-shadow(0 0 40px var(--accent-dim)) drop-shadow(0 30px 60px rgba(0,0,0,0.8));
+  transition: filter 0.4s ease;
+}
+
+.agent-art img:hover {
+  filter: drop-shadow(0 0 60px var(--accent)) drop-shadow(0 30px 60px rgba(0,0,0,0.8));
+}
+
+/* bottom gradient fade on left panel */
+.agent-left::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ── RIGHT PANEL — info ── */
+.agent-right {
+  padding: 3rem 3rem 5rem;
+  overflow-y: auto;
+}
+
+/* ── HERO INFO ── */
+.agent-eyebrow {
+  font-family: 'Orbitron', sans-serif; font-size: 8px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--accent); opacity: 0.7; margin-bottom: 0.5rem;
+}
+
+.agent-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900; letter-spacing: 0.08em;
+  color: #fff;
+  text-shadow: 0 0 40px var(--accent-dim);
+  line-height: 1;
+}
+
+.agent-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem; letter-spacing: 0.2em;
+  color: var(--accent); opacity: 0.5;
+  text-transform: uppercase; margin-top: 0.4rem;
+}
+
+.agent-tags {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 1.2rem;
+}
+.tag {
+  font-family: 'Orbitron', sans-serif; font-size: 7px;
+  letter-spacing: 0.15em; padding: 4px 12px; border-radius: 2px;
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-bg);
+  color: var(--accent); text-transform: uppercase;
+}
+
+.agent-quote {
+  margin-top: 1.5rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.05rem; font-style: italic;
+  color: var(--text-dim);
+  border-left: 2px solid var(--accent-dim);
+  padding-left: 1rem;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* ── DIVIDER ── */
+.section-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 2rem 0;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-family: 'Orbitron', sans-serif; font-size: 8px;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--accent); opacity: 0.55;
+  margin-bottom: 1.2rem;
+}
+
+/* ── STATS ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.stat-block {
+  background: var(--surface);
+  padding: 0.9rem 0.5rem;
+  text-align: center;
+}
+.stat-block .sl {
+  font-family: 'Orbitron', sans-serif; font-size: 7px;
+  letter-spacing: 0.15em; color: var(--accent); opacity: 0.5;
+  text-transform: uppercase;
+}
+.stat-block .sv {
+  font-family: 'Orbitron', sans-serif; font-size: 1.4rem;
+  font-weight: 700; color: #fff; margin-top: 4px;
+}
+
+/* ── BIO ── */
+.bio-text {
+  font-size: 1rem; line-height: 1.85;
+  color: var(--text-dim);
+  max-width: 600px;
+}
+
+/* ── ABILITIES ── */
+.abilities-list { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.ability {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent-dim);
+  border-radius: 0 4px 4px 0;
+  padding: 1rem 1.2rem;
+  transition: border-left-color 0.25s, background 0.25s;
+}
+.ability:hover {
+  border-left-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.ability-header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 0.5rem;
+}
+.ability-type {
+  font-family: 'Orbitron', sans-serif; font-size: 7px;
+  letter-spacing: 0.15em; padding: 2px 8px; border-radius: 2px;
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-bg);
+  color: var(--accent); text-transform: uppercase; flex-shrink: 0;
+}
+.ability-name {
+  font-family: 'Orbitron', sans-serif; font-size: 11px;
+  font-weight: 700; letter-spacing: 0.1em; color: #fff;
+}
+.ability-desc {
+  font-size: 0.95rem; line-height: 1.7;
+  color: var(--text-dim);
+}
+
+/* ── SYNERGY ── */
+.synergy-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.syn-tag {
+  font-family: 'Rajdhani', sans-serif; font-size: 13px;
+  letter-spacing: 0.08em; padding: 6px 16px;
+  border: 0.5px solid var(--border);
+  border-radius: 2px; color: var(--text-dim);
+  transition: border-color 0.25s, color 0.25s;
+}
+.syn-tag:hover { border-color: var(--accent-dim); color: var(--text); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .agent-layout { grid-template-columns: 1fr; }
+  .agent-left {
+    position: relative; top: auto; height: 360px;
+  }
+  .agent-art img { width: 220px; }
+  .agent-right { padding: 2rem 1.5rem 4rem; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+}

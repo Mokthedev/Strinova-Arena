@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lawine — Strinova</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/agent.css">
+<style>
+  :root {
+    --accent:      #ff3014;
+    --accent-dim:  rgba(255,48,20,0.3);
+    --accent-glow: rgba(255,48,20,0.1);
+    --accent-bg:   rgba(255,48,20,0.06);
+  }
+  .ability.active { border-left-color:var(--accent); background:var(--accent-glow); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../card.html" class="back-btn"><span class="arrow">←</span> All Agents</a>
+  <span class="topbar-faction">The Scissors</span>
+</div>
+
+<div class="agent-layout">
+
+  <div class="agent-left">
+    <span class="bg-name">LAWINE</span>
+    <div class="agent-art">
+      <img src="../images/active_lawine.png" alt="Lawine">
+    </div>
+  </div>
+
+  <div class="agent-right">
+
+    <p class="agent-eyebrow">The Scissors · Vanguard</p>
+    <h1 class="agent-name">LAWINE</h1>
+    <p class="agent-title">Enforcer No.3 · Stealth Specialist</p>
+
+    <div class="agent-tags"><span class="tag">The Scissors</span><span class="tag">Vanguard</span><span class="tag">Mid Range</span><span class="tag">Stealth</span><span class="tag">Intel</span><span class="tag">Attacker</span></div>
+
+    <p class="agent-quote">"You never saw me. That's the point."</p>
+
+    <div class="section-divider"></div>
+
+    <p class="section-title">Base Stats</p>
+    <div class="stats-grid"><div class="stat-block"><div class="sl">ATK</div><div class="sv">80</div></div><div class="stat-block"><div class="sl">STL</div><div class="sv">96</div></div><div class="stat-block"><div class="sl">SPD</div><div class="sv">86</div></div><div class="stat-block"><div class="sl">HP</div><div class="sv">78</div></div><div class="stat-block"><div class="sl">DIFF</div><div class="sv">★★</div></div></div>
+
+    <p class="section-title">Biography</p>
+    <p class="bio-text">The tutorial character of Strinova and the stealth specialist of The Scissors. Lawine betrayed P.U.S. to join The Scissors, believing in their cause to return humanity to Earth. She excels at creating her own hunting grounds where she can dip in and out of combat with impunity. Between stealth uses she functions as a midlaner who marks enemy positions and applies constant offensive pressure, making her one of the most versatile agents in the game.</p>
+
+    <div class="section-divider"></div>
+
+    <p class="section-title">Abilities</p>
+    <div class="abilities-list">
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Passive</span>
+          <span class="ability-name">Scan Pulse</span>
+        </div>
+        <p class="ability-desc">Lawine's active skill sends out scan pulses that reveal nearby enemies to the entire team for a short duration.</p>
+      </div>
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Active</span>
+          <span class="ability-name">Shadow Scan</span>
+        </div>
+        <p class="ability-desc">Lawine throws a scan dagger that immediately reveals all enemies within range on impact. Can be upgraded to also slow revealed enemies.</p>
+      </div>
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Ultimate</span>
+          <span class="ability-name">Stealth Zone</span>
+        </div>
+        <p class="ability-desc">Creates a Stealth Zone where Lawine becomes invisible. She can now fire, use skills, and throw grenades while in stealth, but must wait 5 seconds before re-entering stealth after doing so.</p>
+      </div>
+
+    </div>
+
+    <div class="section-divider"></div>
+
+    <p class="section-title">Team Synergy</p>
+    <div class="synergy-list"><span class="syn-tag">Eika — Intel then Eika close-range burst</span><span class="syn-tag">Ming — Lawine reveals, Ming slows and kills</span><span class="syn-tag">Kanami — Double long-range recon team</span><span class="syn-tag">Reiichi — Lawine stealth + Reiichi snipe combo</span></div>
+
+  </div>
+</div>
+
+<script src="../js/agent.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galatea — Strinova</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/agent.css">
+<style>
+  :root {
+    --accent:      #ffb400;
+    --accent-dim:  rgba(255,180,0,0.3);
+    --accent-glow: rgba(255,180,0,0.1);
+    --accent-bg:   rgba(255,180,0,0.06);
+  }
+  .ability.active { border-left-color:var(--accent); background:var(--accent-glow); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../card.html" class="back-btn"><span class="arrow">←</span> All Agents</a>
+  <span class="topbar-faction">Urbino</span>
+</div>
+
+<div class="agent-layout">
+
+  <div class="agent-left">
+    <span class="bg-name">GALATEA</span>
+    <div class="agent-art">
+      <img src="../images/active_gala.png" alt="Galatea">
+    </div>
+  </div>
+
+  <div class="agent-right">
+
+    <p class="agent-eyebrow">Urbino · Vanguard</p>
+    <h1 class="agent-name">GALATEA</h1>
+    <p class="agent-title">Grand Magician · Urbino Artist</p>
+
+    <div class="agent-tags"><span class="tag">Urbino</span><span class="tag">Vanguard</span><span class="tag">Mid Range</span><span class="tag">Teleport</span><span class="tag">Decoy</span><span class="tag">Both Sides</span></div>
+
+    <p class="agent-quote">"Art is performance. The battlefield is my stage. Now watch closely."</p>
+
+    <div class="section-divider"></div>
+
+    <p class="section-title">Base Stats</p>
+    <div class="stats-grid"><div class="stat-block"><div class="sl">ATK</div><div class="sv">78</div></div><div class="stat-block"><div class="sl">MOB</div><div class="sv">96</div></div><div class="stat-block"><div class="sl">SPD</div><div class="sv">90</div></div><div class="stat-block"><div class="sl">HP</div><div class="sv">76</div></div><div class="stat-block"><div class="sl">DIFF</div><div class="sv">★★★★★</div></div></div>
+
+    <p class="section-title">Biography</p>
+    <p class="bio-text">An artist, magician, and art dealer of Urbino, Galatea is the older and more celebrated sister of Maddelena. She travels Strinova with theatrical flair, creating elaborate illusions mid-combat. Her teleportation-based kit makes her the most mobile agent in the game and the hardest to master. Her passive leaves decoys every time she unsticks from a wall. Her ultimate deploys multiple teleportation decoys simultaneously, making her position completely unknowable to enemies.</p>
+
+    <div class="section-divider"></div>
+
+    <p class="section-title">Abilities</p>
+    <div class="abilities-list">
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Passive</span>
+          <span class="ability-name">Deception</span>
+        </div>
+        <p class="ability-desc">Galatea leaves behind a decoy whenever she unsticks from a wall. Decoys detect nearby enemies and briefly expose those who attack them. Passive only goes on cooldown if a decoy is damaged.</p>
+      </div>
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Active</span>
+          <span class="ability-name">Wild Card</span>
+        </div>
+        <p class="ability-desc">Galatea throws a card in an arc. On impact with ground or wall, it creates a decoy she can teleport to. Enemies attacking the decoy are exposed and briefly blinded.</p>
+      </div>
+
+      <div class="ability">
+        <div class="ability-header">
+          <span class="ability-type">Ultimate</span>
+          <span class="ability-name">Mirage</span>
+        </div>
+        <p class="ability-desc">Galatea tosses multiple cards forward, each creating a teleportation decoy in different positions simultaneously, making her location completely unpredictable.</p>
+      </div>
+
+    </div>
+
+    <div class="section-divider"></div>
+
+    <p class="section-title">Team Synergy</p>
+    <div class="synergy-list"><span class="syn-tag">Maddelena — Sisters: Galatea flanks, Maddelena blocks retreat</span><span class="syn-tag">Celestia — Armor sustain for Galatea's risky teleports</span><span class="syn-tag">Bai Mo — Galatea creates chaos, Bai Mo dives in</span><span class="syn-tag">Fuchsia — Double teleport/flank team</span></div>
+
+  </div>
+</div>
+
+<script src="../js/agent.js"></script>
+</body>
+</html>
