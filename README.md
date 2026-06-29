@@ -13,7 +13,7 @@ A fan-made web showcase of all agents from the game **Strinova**, featuring deta
 - Clean and responsive design
 
 ## Live Demo
-[GitHub Pages / your link here]
+[[GitHub Pages / your link here]](https://mokthedev.github.io/Strinova-Arena)
 
 ## How to Run
 Just open `card.html` in your browser
